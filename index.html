@@ -96,13 +96,14 @@
 			<ul style="font-size: 0.95em; line-height: 1.6;">
 				<li>Owned the <strong>core tracking module</strong> end to end (Django models and REST API, React UI) through several redesigns, including a complex domain data model.</li>
 				<li>Split a single django-rq worker into <strong>3 prioritized queues</strong> (notifications, monitoring, default) with dedicated workers and schedulers; updated the Kubernetes manifests and Cloud Build pipeline on GKE.</li>
-				<li>Designed and implemented the <strong>integration between the Django core and an external Identity service</strong> (OAuth2), mapping identity roles to 5 hierarchical user types for multi-tenant access control.</li>
+				<li>Built from scratch the platform's <strong>access control</strong>: an allowlist that restricted the app to Bayer users, OAuth2 integration with an external Identity service, and a hierarchical node-tree permission model mapping 5 user types to different permissions and frontend views; added batch user onboarding.</li>
+				<li>Wrote <strong>data ingestion scripts</strong> to validate, transform and load client-provided datasets, keeping production data up to date.</li>
 				<li>Built from scratch a <strong>server-side PDF service</strong> (Express + Puppeteer) that renders recommendations, visit reports and product datasheets.</li>
 				<li>Designed and built <strong>geospatial features</strong>: field creation from GeoJSON/KML, Google Maps views with marker clustering, and weather and humidity map layers.</li>
 				<li>Defined the <strong>Mixpanel tracking plan</strong> and instrumented product events across the web app and embeddable widgets.</li>
-				<li>Built an <strong>offline-first PWA</strong> for field audio notes with in-browser speech-to-text (Vosk) and IndexedDB sync, implemented from Figma designs.</li>
+				<li>Built an <strong>offline-first PWA</strong> for field audio notes with in-browser speech-to-text (Vosk) and IndexedDB sync, from Figma designs.</li>
 				<li>Set up the platform's <strong>monitoring stack</strong> (Prometheus + Grafana) and contributed to the FastAPI identity microservices (account lockout, password history, email verification).</li>
-				<li>Created the <strong>end-to-end test suite</strong> (Playwright + axe-core, Dockerized) covering the platform's core user flows; expanded backend and frontend tests (Django TestCase, pytest, Vitest).</li>
+				<li>Created a Dockerized <strong>end-to-end test suite</strong> (Playwright + axe-core) for core user flows; expanded backend and frontend tests (Django TestCase, pytest, Vitest).</li>
 				<li>Shipped features in ES/PT/EN for Bayer's agtech brands across 5 countries. One of the two main contributors to the core repository (about 6,700 commits and 570 pull requests).</li>
 				<li>Worked in Scrum directly with the client and product owners.</li>
 				<li>Also delivered projects for other agribusiness clients using Next.js, GraphQL, tRPC/Prisma, SvelteKit + Strapi, and Okta SSO.</li>
