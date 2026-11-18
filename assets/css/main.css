@@ -1337,24 +1337,25 @@ input, select, textarea {
 				line-height: 2;
 			}
 
-		#header nav ul {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			margin-bottom: 0;
-			list-style: none;
-			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
-		}
+	#header nav ul {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		margin-bottom: 0;
+		list-style: none;
+		padding-left: 0;
+		border: solid 1px #ffffff;
+		border-radius: 4px;
+		position: relative;
+		z-index: 1;
+	}
 
-			#header nav ul li {
-				padding-left: 0;
-				border-left: solid 1px #ffffff;
-				background-color: #000000;
-				opacity: 0.8;
-			}
+		#header nav ul li {
+			padding-left: 0;
+			border-left: solid 1px #ffffff;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
 
 				#header nav ul li:first-child {
 					border-left: 0;
@@ -1380,9 +1381,16 @@ input, select, textarea {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
 
-	#header nav.use-middle:after {
-		display: none;
-	}
+		#header nav.use-middle:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: calc(50% - 1px);
+			width: 1px;
+			height: 100%;
+			background: #ffffff;
+		}
 
 		#header nav.use-middle ul li.is-middle {
 			border-left: 0;
