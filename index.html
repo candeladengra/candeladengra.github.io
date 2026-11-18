@@ -72,12 +72,12 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<p>
-									Full-stack developer with 5 years building and running a production agtech platform used by agronomists and sales reps across 5 Latin American countries. Strongest in Python/Django and Django REST Framework, with solid React/TypeScript. I owned the platform's field-tracking module end to end and designed core pieces of the system: OAuth2 integration with an external identity service, prioritized async job queues (django-rq + Redis), a server-side PDF rendering service and the monitoring stack (Prometheus + Grafana).
-								</p>
-								<p>
-									I work directly with clients and product owners, own features end to end, and use AI coding tools (Claude Code, Copilot) every day. My background in law (Universidad de Buenos Aires, Diploma de Honor) shows in how I analyze requirements and edge cases.
-								</p>
+			<p>
+				Full-stack developer with 5 years building and running a production agtech platform used by agronomists and sales reps across 5 Latin American countries. Strongest in Python/Django and Django REST Framework, with solid React/TypeScript. I owned the platform's core tracking module end to end and designed core pieces of the system: OAuth2 integration with an external identity service, prioritized async job queues (django-rq + Redis), a server-side PDF rendering service and the monitoring stack (Prometheus + Grafana).
+			</p>
+			<p>
+				I work directly with clients and product owners, own features end to end, and use AI coding tools (Cursor, Claude Code, ChatGPT/Codex) every day. My background in law (Universidad de Buenos Aires, Diploma de Honor) shows in how I analyze requirements and edge cases.
+			</p>
 								<p style="font-size: 0.9em; color: #999; margin-top: 1.5em;">
 									<strong>Location:</strong> Buenos Aires, Argentina<br/>
 									<strong>Availability:</strong> Open to remote, hybrid or on-site opportunities
@@ -88,24 +88,25 @@
 							<article id="experience">
 								<h2 class="major">Experience</h2>
 								
-								<h3 style="margin-bottom: 0.2em;">Full-Stack Developer</h3>
-								<p style="margin: 0;"><strong>Magoya</strong> · Buenos Aires · <em>Nov 2021 – Nov 2026</em></p>
-								<p style="margin-top: 0.5em; font-size: 0.95em;">
-									Software consultancy. Main product: <strong>Cultivio / Experto Bayer</strong>, a crop-recommendation and field-monitoring platform for Bayer in Argentina, Brazil, Mexico, Paraguay and Uruguay (400+ validated users, 22,000+ fields managed).
-								</p>
-								<ul style="font-size: 0.95em; line-height: 1.6;">
-									<li>Owned the <strong>field-tracking module</strong> end to end (Django models and REST API, React UI) through several redesigns, including the multi-hybrid crop-monitoring model (up to 5 hybrids per field and season).</li>
-									<li>Split a single django-rq worker into <strong>3 prioritized queues</strong> (notifications, monitoring, default) with dedicated workers and schedulers; updated the Kubernetes manifests and Cloud Build pipeline on GKE.</li>
-									<li>Designed and implemented the <strong>OAuth2 integration</strong> between the Django core and an external Identity service, mapping identity roles to 5 hierarchical user types for multi-tenant access control.</li>
-									<li>Built from scratch a <strong>server-side PDF service</strong> (Express + Puppeteer) that renders recommendations, visit reports and product datasheets.</li>
-									<li>Designed and built <strong>geospatial features</strong>: field creation from GeoJSON/KML, Google Maps views with marker clustering, and weather and humidity map layers.</li>
-									<li>Built an <strong>offline-first PWA</strong> for field audio notes with in-browser speech-to-text (Vosk) and IndexedDB sync, implemented from Figma designs.</li>
-									<li>Set up the platform's <strong>monitoring stack</strong> (Prometheus + Grafana) and contributed to the FastAPI identity microservices (account lockout, password history, email verification).</li>
-									<li>Created the <strong>end-to-end test suite</strong> (Playwright + axe-core, Dockerized) covering field, crop-monitoring and recommendation flows; expanded backend and frontend tests (Django TestCase, pytest, Vitest).</li>
-									<li>Shipped features in ES/PT/EN for 5 countries and several brands (Bayer, Dekalb, FieldView). One of the two main contributors to the core repository (about 6,700 commits and 570 pull requests).</li>
-									<li>Worked in Scrum directly with the client and product owners.</li>
-									<li>Also delivered for other clients: Bunge (Next.js + Django), Nidera/Syngenta (Okta SSO login), Precision Planting (Next.js + GraphQL), Optimus (Next.js + tRPC + Prisma), plus a SvelteKit + Strapi marketing site.</li>
-								</ul>
+			<h3 style="margin-bottom: 0.2em;">Full-Stack Developer</h3>
+			<p style="margin: 0;"><strong>Magoya</strong> · Buenos Aires · <em>Nov 2021 – Nov 2026</em></p>
+			<p style="margin-top: 0.5em; font-size: 0.95em;">
+				Software consultancy. Main product: <strong>Cultivio / Experto Bayer</strong>, a crop-recommendation and field-monitoring platform for Bayer in Argentina, Brazil, Mexico, Paraguay and Uruguay (400+ validated users, 22,000+ fields managed).
+			</p>
+			<ul style="font-size: 0.95em; line-height: 1.6;">
+				<li>Owned the <strong>core tracking module</strong> end to end (Django models and REST API, React UI) through several redesigns, including a complex domain data model.</li>
+				<li>Split a single django-rq worker into <strong>3 prioritized queues</strong> (notifications, monitoring, default) with dedicated workers and schedulers; updated the Kubernetes manifests and Cloud Build pipeline on GKE.</li>
+				<li>Designed and implemented the <strong>integration between the Django core and an external Identity service</strong> (OAuth2), mapping identity roles to 5 hierarchical user types for multi-tenant access control.</li>
+				<li>Built from scratch a <strong>server-side PDF service</strong> (Express + Puppeteer) that renders recommendations, visit reports and product datasheets.</li>
+				<li>Designed and built <strong>geospatial features</strong>: field creation from GeoJSON/KML, Google Maps views with marker clustering, and weather and humidity map layers.</li>
+				<li>Defined the <strong>Mixpanel tracking plan</strong> and instrumented product events across the web app and embeddable widgets.</li>
+				<li>Built an <strong>offline-first PWA</strong> for field audio notes with in-browser speech-to-text (Vosk) and IndexedDB sync, implemented from Figma designs.</li>
+				<li>Set up the platform's <strong>monitoring stack</strong> (Prometheus + Grafana) and contributed to the FastAPI identity microservices (account lockout, password history, email verification).</li>
+				<li>Created the <strong>end-to-end test suite</strong> (Playwright + axe-core, Dockerized) covering the platform's core user flows; expanded backend and frontend tests (Django TestCase, pytest, Vitest).</li>
+				<li>Shipped features in ES/PT/EN for Bayer's agtech brands across 5 countries. One of the two main contributors to the core repository (about 6,700 commits and 570 pull requests).</li>
+				<li>Worked in Scrum directly with the client and product owners.</li>
+				<li>Also delivered projects for other agribusiness clients using Next.js, GraphQL, tRPC/Prisma, SvelteKit + Strapi, and Okta SSO.</li>
+			</ul>
 								
 								<h3 style="margin-bottom: 0.2em; margin-top: 1.5em;">Paralegal (Procuradora)</h3>
 								<p style="margin: 0;"><strong>Estudio Gabriel Macchiavello</strong> · Buenos Aires · <em>Jan 2020 – Sep 2021</em></p>
@@ -118,30 +119,30 @@
 							<article id="work">
 								<h2 class="major">Selected Work</h2>
 								
-								<div style="margin-bottom: 2.5em;">
-									<h3>Field Tracking & Multi-Hybrid Crop Monitoring</h3>
-									<svg width="100%" height="120" viewBox="0 0 600 120" style="margin: 1em 0; background: #1a1a1a; border-radius: 4px;">
-										<rect x="20" y="30" width="100" height="60" fill="#667eea" rx="4"/>
-										<text x="70" y="65" fill="white" font-size="12" text-anchor="middle">Field Data</text>
-										<line x1="120" y1="60" x2="160" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow)"/>
-										<rect x="160" y="30" width="100" height="60" fill="#667eea" rx="4"/>
-										<text x="210" y="55" fill="white" font-size="11" text-anchor="middle">Multi-Hybrid</text>
-										<text x="210" y="70" fill="white" font-size="11" text-anchor="middle">Model</text>
-										<line x1="260" y1="60" x2="300" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow)"/>
-										<rect x="300" y="30" width="100" height="60" fill="#764ba2" rx="4"/>
-										<text x="350" y="55" fill="white" font-size="11" text-anchor="middle">22,000+</text>
-										<text x="350" y="70" fill="white" font-size="11" text-anchor="middle">Fields</text>
-										<defs>
-											<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-												<path d="M0,0 L0,6 L9,3 z" fill="#999"/>
-											</marker>
-										</defs>
-									</svg>
-									<p><strong>Problem:</strong> Agronomists needed to track fields with multiple hybrid crops per season, but the platform only supported single-crop monitoring.</p>
-									<p><strong>Solution:</strong> Redesigned the field-tracking module from the ground up to support up to 5 hybrids per field and season, with separate monitoring dashboards for each hybrid. Built the Django models, REST API endpoints, and React UI components.</p>
-									<p><strong>Stack:</strong> Django, Django REST Framework, React, TypeScript, PostgreSQL</p>
-									<p><strong>Outcome:</strong> Platform now manages 22,000+ fields across 5 countries for 400+ validated users.</p>
-								</div>
+			<div style="margin-bottom: 2.5em;">
+				<h3>Core Tracking Module with Complex Domain Model</h3>
+				<svg width="100%" height="120" viewBox="0 0 600 120" style="margin: 1em 0; background: #1a1a1a; border-radius: 4px;">
+					<rect x="20" y="30" width="100" height="60" fill="#667eea" rx="4"/>
+					<text x="70" y="65" fill="white" font-size="12" text-anchor="middle">Field Data</text>
+					<line x1="120" y1="60" x2="160" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow)"/>
+					<rect x="160" y="30" width="100" height="60" fill="#667eea" rx="4"/>
+					<text x="210" y="55" fill="white" font-size="11" text-anchor="middle">Domain</text>
+					<text x="210" y="70" fill="white" font-size="11" text-anchor="middle">Model</text>
+					<line x1="260" y1="60" x2="300" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow)"/>
+					<rect x="300" y="30" width="100" height="60" fill="#764ba2" rx="4"/>
+					<text x="350" y="55" fill="white" font-size="11" text-anchor="middle">22,000+</text>
+					<text x="350" y="70" fill="white" font-size="11" text-anchor="middle">Fields</text>
+					<defs>
+						<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+							<path d="M0,0 L0,6 L9,3 z" fill="#999"/>
+						</marker>
+					</defs>
+				</svg>
+				<p><strong>Problem:</strong> The platform needed to support a more complex domain model to track multiple related entities per field and season.</p>
+				<p><strong>Solution:</strong> Redesigned the core tracking module from the ground up to support the new data model with separate dashboards for each entity. Built the Django models, REST API endpoints, and React UI components.</p>
+				<p><strong>Stack:</strong> Django, Django REST Framework, React, TypeScript, PostgreSQL</p>
+				<p><strong>Outcome:</strong> Platform now manages 22,000+ fields across 5 countries for 400+ validated users.</p>
+			</div>
 								
 								<div style="margin-bottom: 2.5em;">
 									<h3>Prioritized Async Job Queues on GKE</h3>
@@ -196,7 +197,7 @@
 											</marker>
 										</defs>
 									</svg>
-									<p><strong>Problem:</strong> Agronomists working in remote fields with no network connectivity needed to record voice notes about crops.</p>
+									<p><strong>Problem:</strong> Agronomists working in remote fields with no network connectivity needed to record field audio notes.</p>
 									<p><strong>Solution:</strong> Built an offline-first Progressive Web App with in-browser speech-to-text transcription using Vosk. Notes are stored locally in IndexedDB and synced automatically when connectivity returns. Implemented from Figma designs.</p>
 									<p><strong>Stack:</strong> React, TypeScript, Vosk, IndexedDB, PWA, Service Workers</p>
 									<p><strong>Outcome:</strong> Agronomists can now capture field observations in real-time, regardless of network conditions.</p>
@@ -232,22 +233,22 @@
 									Django TestCase · pytest · Vitest · Playwright
 								</p>
 								
-								<h3>Practices</h3>
-								<p style="font-size: 0.95em; line-height: 1.8;">
-									OAuth2 and auth flows · Multi-tenancy · Internationalization (i18n) · Accessibility · Code review · Scrum/Jira · AI-assisted development (Claude Code, Copilot)
-								</p>
+			<h3>Practices</h3>
+			<p style="font-size: 0.95em; line-height: 1.8;">
+				OAuth2 and auth flows · Multi-tenancy · Internationalization (i18n) · Accessibility · Code review · Scrum/Jira · AI-assisted development (Cursor, Claude Code, ChatGPT/Codex)
+			</p>
 							</article>
 
 						<!-- Education -->
 							<article id="education">
 								<h2 class="major">Education & Languages</h2>
 								
-								<h3>Education</h3>
-								<p style="margin-bottom: 1em;">
-									<strong>Systems Engineering</strong> (in progress)<br/>
-									Universidad Abierta Interamericana (UAI)<br/>
-									<em>Includes an intermediate degree in Programming, expected 2027</em>
-								</p>
+			<h3>Education</h3>
+			<p style="margin-bottom: 1em;">
+				<strong>Systems Engineering</strong> (in progress, expected 2029)<br/>
+				Universidad Abierta Interamericana (UAI)<br/>
+				<em>Intermediate degree in Programming expected 2027</em>
+			</p>
 								<p style="margin-bottom: 1em;">
 									<strong>Law degree (Abogacía)</strong><br/>
 									Universidad de Buenos Aires<br/>
