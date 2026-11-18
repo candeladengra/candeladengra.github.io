@@ -106,7 +106,7 @@
 				<li>Created a Dockerized <strong>end-to-end test suite</strong> (Playwright + axe-core) for core user flows; expanded backend and frontend tests (Django TestCase, pytest, Vitest).</li>
 				<li>Shipped features in ES/PT/EN for Bayer's agtech brands across 5 countries. One of the two main contributors to the core repository (about 6,700 commits and 570 pull requests).</li>
 				<li>Worked in Scrum directly with the client and product owners.</li>
-				<li>Also delivered projects for other agribusiness clients using Next.js, GraphQL, tRPC/Prisma, SvelteKit + Strapi, and Okta SSO.</li>
+				<li>Also delivered projects for other agribusiness clients using Next.js, GraphQL, tRPC/Prisma, and SvelteKit + Strapi.</li>
 			</ul>
 								
 								<h3 style="margin-bottom: 0.2em; margin-top: 1.5em;">Paralegal (Procuradora)</h3>
@@ -143,6 +143,41 @@
 				<p><strong>Solution:</strong> Redesigned the core tracking module from the ground up to support the new data model with separate dashboards for each entity. Built the Django models, REST API endpoints, and React UI components.</p>
 				<p><strong>Stack:</strong> Django, Django REST Framework, React, TypeScript, PostgreSQL</p>
 				<p><strong>Outcome:</strong> Platform now manages 22,000+ fields across 5 countries for 400+ validated users.</p>
+			</div>
+								
+			<div style="margin-bottom: 2.5em;">
+				<h3>Access Control & Hierarchical Permissions</h3>
+				<svg width="100%" height="120" viewBox="0 0 600 120" style="margin: 1em 0; background: #1a1a1a; border-radius: 4px;">
+					<rect x="15" y="35" width="70" height="50" fill="#667eea" rx="4"/>
+					<text x="50" y="65" fill="white" font-size="11" text-anchor="middle">Login</text>
+					<line x1="85" y1="60" x2="120" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-access)"/>
+					<rect x="120" y="35" width="70" height="50" fill="#667eea" rx="4"/>
+					<text x="155" y="65" fill="white" font-size="10" text-anchor="middle">Allowlist</text>
+					<line x1="190" y1="60" x2="225" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-access)"/>
+					<rect x="225" y="35" width="70" height="50" fill="#764ba2" rx="4"/>
+					<text x="260" y="65" fill="white" font-size="10" text-anchor="middle">OAuth2</text>
+					<line x1="295" y1="60" x2="330" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-access)"/>
+					<rect x="330" y="20" width="50" height="35" fill="#667eea" rx="3"/>
+					<text x="355" y="42" fill="white" font-size="9" text-anchor="middle">Root</text>
+					<rect x="315" y="65" width="40" height="30" fill="#667eea" rx="3"/>
+					<text x="335" y="83" fill="white" font-size="8" text-anchor="middle">Node</text>
+					<rect x="365" y="65" width="40" height="30" fill="#667eea" rx="3"/>
+					<text x="385" y="83" fill="white" font-size="8" text-anchor="middle">Node</text>
+					<line x1="355" y1="55" x2="335" y2="65" stroke="#999" stroke-width="1"/>
+					<line x1="355" y1="55" x2="385" y2="65" stroke="#999" stroke-width="1"/>
+					<line x1="390" y1="60" x2="425" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-access)"/>
+					<rect x="425" y="35" width="70" height="50" fill="#48bb78" rx="4"/>
+					<text x="460" y="65" fill="white" font-size="11" text-anchor="middle">Views</text>
+					<defs>
+						<marker id="arrow-access" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+							<path d="M0,0 L0,6 L9,3 z" fill="#999"/>
+						</marker>
+					</defs>
+				</svg>
+				<p><strong>Problem:</strong> The platform had to be restricted to Bayer users only, and different user types needed different permissions and views.</p>
+				<p><strong>Solution:</strong> Built the access control from scratch: an allowlist so only Bayer users could sign in, OAuth2 integration with an external identity service, and a hierarchical permission model based on a tree of nodes that maps 5 user types to different permissions and frontend views. Also built batch onboarding to upload new users in bulk.</p>
+				<p><strong>Stack:</strong> Django, Django REST Framework, OAuth2, React, TypeScript, PostgreSQL</p>
+				<p><strong>Outcome:</strong> Secure, role-based access where each user sees only what their role allows, and new users can be onboarded in bulk instead of one by one.</p>
 			</div>
 								
 								<div style="margin-bottom: 2.5em;">
@@ -203,6 +238,36 @@
 									<p><strong>Stack:</strong> React, TypeScript, Vosk, IndexedDB, PWA, Service Workers</p>
 									<p><strong>Outcome:</strong> Agronomists can now capture field observations in real-time, regardless of network conditions.</p>
 								</div>
+								
+			<div style="margin-bottom: 2.5em;">
+				<h3>Data Ingestion Scripts</h3>
+				<svg width="100%" height="120" viewBox="0 0 600 120" style="margin: 1em 0; background: #1a1a1a; border-radius: 4px;">
+					<rect x="20" y="35" width="85" height="50" fill="#667eea" rx="4"/>
+					<text x="62" y="55" fill="white" font-size="10" text-anchor="middle">Client</text>
+					<text x="62" y="70" fill="white" font-size="10" text-anchor="middle">Datasets</text>
+					<line x1="105" y1="60" x2="150" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-ingestion)"/>
+					<rect x="150" y="35" width="85" height="50" fill="#764ba2" rx="4"/>
+					<text x="192" y="65" fill="white" font-size="11" text-anchor="middle">Validate</text>
+					<line x1="235" y1="60" x2="280" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-ingestion)"/>
+					<rect x="280" y="35" width="85" height="50" fill="#764ba2" rx="4"/>
+					<text x="322" y="65" fill="white" font-size="11" text-anchor="middle">Transform</text>
+					<line x1="365" y1="60" x2="410" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-ingestion)"/>
+					<rect x="410" y="35" width="70" height="50" fill="#48bb78" rx="4"/>
+					<text x="445" y="65" fill="white" font-size="11" text-anchor="middle">Load</text>
+					<line x1="480" y1="60" x2="525" y2="60" stroke="#999" stroke-width="2" marker-end="url(#arrow-ingestion)"/>
+					<rect x="525" y="35" width="90" height="50" fill="#48bb78" rx="4"/>
+					<text x="570" y="60" fill="white" font-size="11" text-anchor="middle">PostgreSQL</text>
+					<defs>
+						<marker id="arrow-ingestion" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+							<path d="M0,0 L0,6 L9,3 z" fill="#999"/>
+						</marker>
+					</defs>
+				</svg>
+				<p><strong>Problem:</strong> Client-provided datasets arrived in varied formats and had to get into production reliably.</p>
+				<p><strong>Solution:</strong> Wrote scripts to validate, transform and load client-provided datasets into the production database.</p>
+				<p><strong>Stack:</strong> Python, Django, PostgreSQL</p>
+				<p><strong>Outcome:</strong> Production data kept up to date with validated, consistent data.</p>
+			</div>
 							</article>
 
 						<!-- Skills -->
